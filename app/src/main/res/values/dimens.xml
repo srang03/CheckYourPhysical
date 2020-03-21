@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin_mini">24dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="standard_66">66dp</dimen>
+    <dimen name="standard_44">44dp</dimen>
+    <dimen name="standard_50">50dp</dimen>
+    <dimen name="standard_55">55dp</dimen>
+    <dimen name="standard_22">22dp</dimen>
+    <dimen name="standard_11">11dp</dimen>
+    <dimen name="standard_100">100dp</dimen>
+    <dimen name="standard_132">132dp</dimen>
+    <dimen name="standard_198">198dp</dimen>
+</resources>
