@@ -33,18 +33,17 @@ class MemoListFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        viewModel = activity!!.application!!.let{
+        viewModel = activity!!.application!!.let {
             ViewModelProvider(
                 activity!!.viewModelStore,
                 ViewModelProvider.AndroidViewModelFactory(it))
                 .get(ListViewModel::class.java)
         }
 
-        viewModel!!.let{
-            it.memoLiveData.value?.let{
+        viewModel!!.let {
+            it.memoLiveData.value?.let {
                 listAdapter = MemoListAdapter(it)
-                memoListView.layoutManager =
-                    LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+                memoListView.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
                 memoListView.adapter = listAdapter
                 listAdapter.itemClickListener = {
                     val intent = Intent(activity, DetailActivity::class.java)
@@ -52,11 +51,11 @@ class MemoListFragment : Fragment() {
                     startActivity(intent)
                 }
             }
-
-            it.memoLiveData.observe(this,
+            it.memoLiveData.observe(viewLifecycleOwner,
                 Observer {
                     listAdapter.notifyDataSetChanged()
-                })
+                }
+            )
         }
     }
 

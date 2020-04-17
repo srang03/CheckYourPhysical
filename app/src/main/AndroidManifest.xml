@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <receiver android:name=".AlarmTool"></receiver>
         <activity android:name=".WhrActivity"></activity>
         <activity android:name=".BmiActivity" />
         <activity

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.srang03.checkyourphysical.DetailActivity
 import com.srang03.checkyourphysical.data.ListViewModel
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_list.*
@@ -51,7 +52,7 @@ class ListActivity : AppCompatActivity() {
             }
 
         }
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener {
            var intent = Intent(applicationContext, DetailActivity::class.java)
             startActivity(intent)
         }

@@ -16,11 +16,19 @@ class MemoDao (private val realm: Realm){
             .equalTo("id", id)
             .findFirst() as MemoData
     }
-    fun addOrUpdateMemo(memoData: MemoData, title: String, content: String){
+
+    fun getActiveAlarms(): RealmResults<MemoData>{
+        return realm.where(MemoData::class.java)
+            .greaterThan("alarmTime", Date())
+            .findAll()
+    }
+
+    fun addOrUpdateMemo(memoData: MemoData, title: String, content: String, alarmTime: Date){
         realm.executeTransaction {
             memoData.title = title
             memoData.content = content
             memoData.createdAt = Date()
+            memoData.alarmTime = alarmTime
 
             if(content.length > 100)
                 memoData.summary = content.substring(0..100)
