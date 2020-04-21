@@ -21,7 +21,7 @@ class AlarmInfoView @JvmOverloads constructor (context: Context,
 
     fun setAlarmDate(alarmDate: Date) {
         if(alarmDate.before(Date())) {
-            infoText.setText("There is no Alarm")
+            infoText.setText("Set your alarm")
         }
         else {
             infoText.setText(dateFormat.format(alarmDate))

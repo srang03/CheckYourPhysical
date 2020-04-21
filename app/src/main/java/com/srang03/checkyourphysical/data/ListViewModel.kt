@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import io.realm.Realm
 
 class ListViewModel: ViewModel(){
-
     private val realm: Realm by lazy{
         Realm.getDefaultInstance()
     }

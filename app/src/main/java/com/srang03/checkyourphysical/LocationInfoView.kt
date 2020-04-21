@@ -17,12 +17,13 @@ class LocationInfoView @JvmOverloads constructor(context: Context,
     }
     fun setLocation(latitude: Double, longitude: Double){
         if(latitude == 0.0 && longitude == 0.0){
-            infoText.setText("There is not having location information")
+            infoText.setText("Set your location")
         }
         else{
             val geocoder = Geocoder(context, Locale.getDefault())
             val addresses = geocoder.getFromLocation(latitude, longitude, 1)
-            infoText.setText("${addresses[0].adminArea}")
+            infoText.setText("${addresses[0].adminArea}, ${addresses[0].countryName}")
+
         }
     }
 }

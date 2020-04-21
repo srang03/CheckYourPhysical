@@ -8,13 +8,18 @@
         android:icon="@drawable/ic_share"
         app:showAsAction="always"/>
 
+
     <item android:id="@+id/menu_alarm"
+        android:icon="@drawable/ic_alarm"
         android:title="Alarm Setting"
         app:showAsAction="never"/>
 
     <item android:id="@+id/menu_location"
+        android:icon="@drawable/ic_location"
         android:title="Location Setting"
         app:showAsAction="never"/>
+
+
 <!--    <item-->
 <!--        android:id="@+id/action_settings"-->
 <!--        android:orderInCategory="100"-->

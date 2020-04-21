@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.srang03.checkyourphysical"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -41,6 +41,9 @@ android {
 }
 
 dependencies {
+
+    def lifecycle_version = "2.2.0"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -55,5 +58,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.naver.maps:map-sdk:3.7.0'
     implementation 'com.takisoft.datetimepicker:datetimepicker:1.0.2'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
 }

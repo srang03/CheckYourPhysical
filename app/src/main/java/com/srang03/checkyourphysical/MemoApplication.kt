@@ -8,6 +8,7 @@ class MemoApplication (): Application(){
     override fun onCreate() {
         super.onCreate()
         Realm.init(this)
+
         NaverMapSdk.getInstance(this).client = NaverMapSdk.NaverCloudPlatformClient("9izt7505i5")
     }
 }

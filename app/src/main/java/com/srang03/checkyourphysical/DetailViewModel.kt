@@ -1,11 +1,14 @@
 package com.srang03.checkyourphysical
 
 import android.content.Context
+import android.graphics.Bitmap
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.srang03.checkyourphysical.data.MemoDao
 import com.srang03.checkyourphysical.data.MemoData
 import io.realm.Realm
+import java.io.File
+import java.io.FileOutputStream
 import java.util.*
 
 class DetailViewModel :ViewModel() {
@@ -62,6 +65,29 @@ class DetailViewModel :ViewModel() {
         AlarmTool.deleteAlarm(context, memoData.id)
         if(memoData.alarmTime.after(Date())){
             AlarmTool.addAlarm(context, memoData.id, memoData.alarmTime)
+        }
+    }
+
+
+
+
+    fun setImageFile(context: Context, bitmap: Bitmap){
+        val imageFile = File(
+            context.getDir("image", Context.MODE_PRIVATE),
+            memoData.id + ".jpg")
+
+        if(imageFile.exists()) imageFile.delete()
+        try{
+            imageFile.createNewFile()
+            val outputStream = FileOutputStream(imageFile)
+
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 80, outputStream)
+            outputStream.close()
+
+            memoData.imageFile = memoData.id + ".jpg"
+            memoLiveData.value = memoData
+        }catch (e: Exception){
+            println(e)
         }
     }
 }
