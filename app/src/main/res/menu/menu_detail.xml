@@ -11,6 +11,10 @@
     <item android:id="@+id/menu_alarm"
         android:title="Alarm Setting"
         app:showAsAction="never"/>
+
+    <item android:id="@+id/menu_location"
+        android:title="Location Setting"
+        app:showAsAction="never"/>
 <!--    <item-->
 <!--        android:id="@+id/action_settings"-->
 <!--        android:orderInCategory="100"-->
