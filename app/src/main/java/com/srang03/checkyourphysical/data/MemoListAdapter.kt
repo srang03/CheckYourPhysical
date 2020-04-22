@@ -21,14 +21,20 @@ class MemoListAdapter (private val list: MutableList<MemoData>)
             itemClickListener?.run{
                 val memoId = it.tag as String
                 this(memoId)
+
             }
         }
         return ItemViewHolder(view)
     }
 
+     fun getItemIdString(position: Int): String {
+        return list[position].id
+    }
+
     override fun getItemCount(): Int {
         return list.count()
     }
+
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         if(list[position].title.isNotEmpty()){
@@ -42,4 +48,8 @@ class MemoListAdapter (private val list: MutableList<MemoData>)
         holder.containerView.dateView.text = dateFormat.format(list[position].createdAt)
         holder.containerView.tag = list[position].id
     }
+
+
+
+
 }

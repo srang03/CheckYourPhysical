@@ -8,7 +8,7 @@ class ListViewModel: ViewModel(){
         Realm.getDefaultInstance()
     }
 
-    private val memoDao: MemoDao by lazy {
+     val memoDao: MemoDao by lazy {
         MemoDao(realm)
     }
 

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.srang03.checkyourphysical.DetailActivity
 import com.srang03.checkyourphysical.data.ListViewModel
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_list.*
@@ -18,6 +17,7 @@ class ListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
         setSupportActionBar(toolbar)
+
 
         var menuOpen: Boolean = false;
 

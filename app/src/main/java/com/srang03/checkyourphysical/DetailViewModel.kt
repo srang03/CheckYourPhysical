@@ -71,6 +71,7 @@ class DetailViewModel :ViewModel() {
 
 
 
+
     fun setImageFile(context: Context, bitmap: Bitmap){
         val imageFile = File(
             context.getDir("image", Context.MODE_PRIVATE),

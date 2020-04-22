@@ -18,12 +18,15 @@ class MemoDao (private val realm: Realm){
     }
 
     fun deleteTodo(id: String){
-        realm.beginTransaction()
-        val deleteItem = selectMemo(id)
+       realm.beginTransaction()
+        val deleteItem = realm.where(MemoData::class.java)
+            .equalTo("id",id)
+            .findFirst() as MemoData
         deleteItem.deleteFromRealm()
         realm.commitTransaction()
 
     }
+
     fun getActiveAlarms(): RealmResults<MemoData>{
         return realm.where(MemoData::class.java)
             .greaterThan("alarmTime", Date())
@@ -42,4 +45,5 @@ class MemoDao (private val realm: Realm){
             it.copyToRealmOrUpdate(memoData)
         }
     }
+
 }
