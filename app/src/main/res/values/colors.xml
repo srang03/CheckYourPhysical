@@ -28,4 +28,6 @@
     <color name="colorPrimaryTab">#E49564DD</color>
     <color name="colorPrimaryList">#D0A678E6</color>
     <color name="color5">#E71D10</color>
+
+    <color name="customToast">#A3BF84EA</color>
 </resources>

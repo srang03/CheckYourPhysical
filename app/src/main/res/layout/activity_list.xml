@@ -18,48 +18,55 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/bmi_fab"
-        app:fabSize="mini"
-        android:backgroundTint="@color/colorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="30dp"
         android:layout_margin="@dimen/fab_margin_mini"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:backgroundTint="#673AB7"
+        app:fabSize="mini"
+        app:rippleColor="?android:attr/panelBackground"
         app:srcCompat="@drawable/bmicheck_bottom_img" />
-
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/whr_fab"
-        app:fabSize="mini"
-        android:backgroundTint="@color/colorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="30dp"
         android:layout_margin="@dimen/fab_margin_mini"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:backgroundTint="#673AB7"
+        app:fabSize="mini"
+        app:rippleColor="?android:attr/panelBackground"
         app:srcCompat="@drawable/whrcheck_bottom_img" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        app:fabSize="mini"
-        android:backgroundTint="@color/colorAccent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="30dp"
         android:layout_margin="@dimen/fab_margin_mini"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/colorPrimaryList"
+        app:backgroundTint="#673AB7"
+        app:fabSize="mini"
+        app:rippleColor="?android:attr/panelBackground"
         app:srcCompat="@drawable/ic_add" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/menu"
-        android:backgroundTint="@color/colorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="30dp"
         android:layout_margin="@dimen/fab_margin"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:backgroundTint="#673AB7"
+        app:rippleColor="?android:attr/panelBackground"
         app:srcCompat="@drawable/ic_menu" />
 
 

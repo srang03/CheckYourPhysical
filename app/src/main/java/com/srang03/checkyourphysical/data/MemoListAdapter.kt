@@ -1,5 +1,6 @@
 package com.srang03.checkyourphysical.data
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,18 +22,33 @@ class MemoListAdapter (private val list: MutableList<MemoData>)
             itemClickListener?.run{
                 val memoId = it.tag as String
                 this(memoId)
-
             }
         }
         return ItemViewHolder(view)
     }
 
      fun getItemIdString(position: Int): String {
+         Log.d("TAG", "${list[position].title}")
         return list[position].id
+
     }
+
+    fun getItemTitleString(position: Int): String {
+        return list[position].title
+
+    }
+
 
     override fun getItemCount(): Int {
         return list.count()
+    }
+
+    fun getItem(position: Int): String{
+        return list[position].id
+}
+
+    override fun getItemId(position: Int): Long {
+        return super.getItemId(position)
     }
 
 

@@ -73,7 +73,7 @@ class MemoListFragment : Fragment() {
 //                (listAdapter as MemoListAdapter).removeItem(viewHolder = )
 //                viewModel!!.memoDao.deleteTodo(listAdapter.getPositionAt(position).toString())
 
-                viewModel?.memoDao!!.deleteTodo(listAdapter.getItemIdString(position))
+                viewModel?.memoDao!!.deleteTodo(listAdapter.getItemIdString(viewHolder.adapterPosition))
                 listAdapter.notifyDataSetChanged()
             }
 

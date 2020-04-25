@@ -26,7 +26,6 @@ class MemoDao (private val realm: Realm){
         realm.commitTransaction()
 
     }
-
     fun getActiveAlarms(): RealmResults<MemoData>{
         return realm.where(MemoData::class.java)
             .greaterThan("alarmTime", Date())

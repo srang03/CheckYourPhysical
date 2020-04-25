@@ -8,7 +8,15 @@
     android:orientation="vertical"
     android:padding="15dp"
     android:weightSum="10">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check your WHtR"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:padding="10dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -88,13 +96,14 @@
             android:layout_height="wrap_content"/>
         <ProgressBar
             android:id="@+id/WHRresultProgressBar"
-            android:max="100"
+            android:max="200"
             style="?android:progressBarStyleHorizontal"
             android:progress="0"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:progressDrawable="@drawable/cpd_3"
+
 
             />
         <TextView
