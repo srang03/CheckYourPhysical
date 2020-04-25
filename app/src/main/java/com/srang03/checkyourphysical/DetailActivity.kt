@@ -113,7 +113,7 @@ class DetailActivity : AppCompatActivity() {
                 mapView.getMapAsync {
                     val latitude = viewModel!!.memoData.latitude
                     val longitude = viewModel!!.memoData.longitude
-                    val cameraPosition = CameraPosition(LatLng(latitude,longitude), 1.0)
+                    val cameraPosition = CameraPosition(LatLng(latitude,longitude),13.0)
                     it.cameraPosition = cameraPosition
                 }
                 AlertDialog.Builder(this)
@@ -170,12 +170,12 @@ class DetailActivity : AppCompatActivity() {
             R.id.menu_alarm -> {
                 if(viewModel?.memoData?.alarmTime!!.after(Date())) {
                     AlertDialog.Builder(this)
-                        .setTitle("안내")
-                        .setMessage("기존에 알람이 설정되어 있습니다. 삭제 또는 재설정할 수 있습니다.")
-                        .setPositiveButton("재설정", DialogInterface.OnClickListener { dialog, which ->
+                        .setTitle("Guide")
+                        .setMessage("You can set or delete the alarm in memo")
+                        .setPositiveButton("Reset", DialogInterface.OnClickListener { dialog, which ->
                             openDateDialog()
                         })
-                        .setNegativeButton("삭제", DialogInterface.OnClickListener { dialog, which ->
+                        .setNegativeButton("Delete", DialogInterface.OnClickListener { dialog, which ->
                             viewModel?.deleteAlarm()
                         })
                         .show()
@@ -188,7 +188,7 @@ class DetailActivity : AppCompatActivity() {
 
             R.id.menu_location -> {
                 AlertDialog.Builder(this)
-                    .setTitle("guide")
+                    .setTitle("Guide")
                     .setMessage("You can save or delete the present location in memo")
                     .setPositiveButton("location appointment", DialogInterface.OnClickListener{
                         dialog, which ->
